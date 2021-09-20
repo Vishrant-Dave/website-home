@@ -1,0 +1,99 @@
+$color-light-gray: #ecf0f1;
+$color-medium-gray: #bdc3c7;
+$color-dark-gray: #34495e;
+$color-light-green: #2ecc71;
+$color-medium-green: #20864b;
+
+$cube-size: 300px;
+$animation-duration: 10s;
+
+.p1cube {
+  width: 300px;
+  height: 300px;
+  perspective: 1500px;
+  left:70%;
+  top:50%;
+  transform:translate(-75%,-20%);
+}
+.cube {
+  width: $cube-size;
+  height: $cube-size;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate $animation-duration linear infinite;
+  
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 50px rgba(90, 65, 65, 0.2);
+    position: absolute;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: rotateX(90deg) translateY($cube-size/2) translateZ(-$cube-size/2);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0px solid black;
+  //  box-shadow: 0 0 30px rgba(black, 0.7);
+    
+    // Back face
+    &:nth-child(1) {
+      transform: translateZ(-$cube-size/2);
+        animation: shade #{$animation-duration} #{-$animation-duration/2} linear infinite;
+    } 
+    
+    // Front face
+    &:nth-child(2) {
+      transform: translateZ($cube-size/2) rotateY(180deg);
+      animation: shade $animation-duration linear infinite;
+    }
+    
+    // Right face
+    &:nth-child(3) {
+      transform-origin: right;
+      transform: translateZ($cube-size/2) rotateY(270deg);
+      animation: shade #{$animation-duration} #{-$animation-duration/4} linear infinite;
+    }
+    
+    // Left face
+    &:nth-child(4) {
+      transform-origin: left;
+      transform: translateZ($cube-size/2) rotateY(90deg);
+      animation: shade #{$animation-duration} #{-($animation-duration*3)/4} linear infinite;
+    }
+    
+    // Bottom face
+    &:nth-child(5) {
+      transform-origin: bottom;
+      transform: translateZ($cube-size/2) rotateX(90deg);
+      background-color: rgba(black, 0.7)
+    }
+    
+    // Top face
+    &:nth-child(6) {
+      opacity: 0;
+      transform-origin: top;
+      transform: translateZ($cube-size/2);
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(-15deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-15deg) rotateY(360deg);
+  }
+}
+
+@keyframes shade {
+  50% {
+    background-color: rgba(black, 0.7);
+  }
+}
