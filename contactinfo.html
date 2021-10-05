@@ -4,15 +4,91 @@
     <meta charset="utf-8" />
     <title>Profile</title>
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div class="cube">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="container-contactpage">
+        <div class="navbar">
+            <div class="left-navbar">
+                <a href="index.html">
+                    <img src="images/logo_navbar_transparent.PNG"height = 50/>
+                </a>
+            </div>
+            <div class="right-navbar">
+                <div class="nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link">
+                    <a href="#">Projects</a>
+                </div>
+                <div class="nav-link">
+                    <a href="#">Profile</a>
+                </div>
+                <div class="nav-link">
+                    <a href="#">Blogs</a>
+                </div>
+                <div class="nav-link1">
+                    <a href="contactinfo.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+        <div class="content">
+            <div class="left-side">
+                <div class="address details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="topic">Address</div>
+                    <div class="text-one">Hall 13, IIT Kanpur</div>
+                    <div class="text-two">Uttar Pradesh, India</div>
+                </div>
+                <div class="email details">
+                    <i class="fas fa-envelope"></i>
+                    <div class="topic">Email</div>
+                    <div class="text-one">vishrant@iitk.ac.in</div>
+                </div>
+                <!---
+                <div class="phone details">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="topic">Phone</div>
+                    <div class="text-one">12345</div>
+                    <div class="text-two">56789</div>
+                </div>
+                -->
+            </div>
+            <!--https://docs.google.com/forms/d/e/1FAIpQLSfrrgGkQSRehMIn6cEu8RG4a26mnie9QJmVKhi5otnZf0ly1Q/viewform?usp=pp_url&entry.1708094709=blablaTESTName&entry.1678461896=blablaTESTEmail&entry.1079590588=blablaTESTMessage-->
+            <div class="right-side">
+                <div class="topic-text">Send Me an Email</div>
+                <p>Feel free to drop a message. I am always up for an interesting conversation :)</p>
+                <form id="gform" name="gform" target="hidden_iframe" onsubmit="submitted=true;" action="https://docs.google.com/forms/d/e/1FAIpQLSfrrgGkQSRehMIn6cEu8RG4a26mnie9QJmVKhi5otnZf0ly1Q/formResponse?">
+                    <div class="input-box">
+                        <input type="text" name="entry.1708094709" id="entry.1708094709" placeholder="Enter your name">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="entry.1678461896" id="entry.1678461896" placeholder="Enter your email">
+                    </div>
+                    <div class="input-box message-box">
+                        <textarea name="entry.1079590588" id="entry.1079590588" rows="8" cols="80" placeholder="Message"></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" name="" value="Submit">
+                    </div>
+                </form>
+
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted){}"></iframe>
+
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                <script type="text/javascript">
+                    var submitted = false;
+                </script>
+                <script type="text/javascript">
+                    $('#gform').on('submit', function(e){
+                        $('#gform *').fadeOut(2000);
+                        $('#gform').prepend('Thank You for sending this message. I will reach out soon.');
+                    });
+                </script>
+            </div>
+        </div>
+        </div>
     </div>
 </body>
 </html>
