@@ -156,7 +156,7 @@ body {
     justify-content: space-between;
     height: 10vh;
     width: 40vh;
-    margin-top: -45vh;
+    margin-top: -38vh;
     margin-left: -28.5vw;
 }
 .p2education > .p2edusym {
@@ -187,7 +187,7 @@ body {
     margin-left: -28.5vw;
 }
 .p2timelinebox > .p2verticalLine {
-    margin-left: 10px;
+    margin-left: 20px;
     width: 8px;
     height: 70vh;
     background-color: #C5CAE9;
@@ -200,7 +200,7 @@ body {
     background-color: #303F9F;
     border-radius: 50%;
     margin-top: -60vh;
-    margin-left: 0.8vh;
+    margin-left: 15px;
 }
 .p2timelinebox > .p2circles > .circle2 {
     width:18px;
@@ -208,7 +208,7 @@ body {
     background-color: #303F9F;
     border-radius: 50%;
     margin-top: 20vh;
-    margin-left: 0.8vh;
+    margin-left: 15px;
 }
 .p2timelinebox > .p2circles > .circle3 {
     width:18px;
@@ -216,12 +216,12 @@ body {
     background-color: #303F9F;
     border-radius: 50%;
     margin-top: 20vh;
-    margin-left: 0.8vh;
+    margin-left: 15px;
 }
 
 .p2timelinebox > .p2timelineInfo > .info1 {
-    margin-left: 30px;
-    margin-top: -50vh;
+    margin-left: 40px;
+    margin-top: -52vh;
     font-family: 'Roboto', sans-serif;
 }
 .p2timelinebox > .p2timelineInfo > .info1 > h3{
@@ -240,8 +240,8 @@ body {
     opacity: 0.7;
 }
 .p2timelinebox > .p2timelineInfo > .info2 {
-    margin-left: 30px;
-    margin-top: 12vh;
+    margin-left: 40px;
+    margin-top: 10.5vh;
     font-family: 'Roboto', sans-serif;
 }
 .p2timelinebox > .p2timelineInfo > .info2 > h3{
@@ -260,8 +260,8 @@ body {
     opacity: 0.7;
 }
 .p2timelinebox > .p2timelineInfo > .info3 {
-    margin-left: 30px;
-    margin-top: 12vh;
+    margin-left: 40px;
+    margin-top: 12.5vh;
     font-family: 'Roboto', sans-serif;
 }
 .p2timelinebox > .p2timelineInfo > .info3 > h3{
@@ -471,7 +471,17 @@ body {
     color: #fffffe;
     margin-left: 100px;
 }
-
+.footer-col > h4{
+    padding: 0%;
+    width: 25vw;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 10px;
+    color: #fffffe;
+    margin-left: 50px;
+}
 .footer-col > .social-links a{
     display: inline-block;
     font-size: 1.4em;
